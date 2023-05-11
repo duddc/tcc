@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('faleConosco');
 });
     
-Route::get('/home', 'App\Http\Controllers\ContatoController@create');
-Route::post('/welcome','App\Http\Controllers\ContatoController@store');
+Route::get('/faleConosco', 'App\Http\Controllers\ControllerTcc@create');
+Route::post('/salvar','App\Http\Controllers\ControllerTcc@store');

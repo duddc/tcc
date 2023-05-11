@@ -10,7 +10,7 @@
    <body>
       <div class="container">
                       
-         <form id="contact" action="/welcome.blade.php" method="post">
+         <form id="contact" action="/salvar" method="post">
                              @csrf
                             
             <h3>Contato</h3>
