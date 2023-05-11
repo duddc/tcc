@@ -11,7 +11,8 @@ class ControllerTcc extends Controller
      */
     public function index()
     {
-        //
+        $faleConosco = nomeModel::all();
+        return view('home',compact('faleConosco'));
     }
 
     /**
@@ -19,7 +20,7 @@ class ControllerTcc extends Controller
      */
     public function create()
     {
-        //
+        return view('home');
     }
 
     /**
@@ -27,8 +28,17 @@ class ControllerTcc extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $faleConosco = new nomeModel();
+        $faleConosco->nomeFaleConosco = $request->txtNome;
+        $faleConosco->emailFaleConosco = $request->txtEmail;
+        $faleConosco->mensagemFaleConosco = $request->txtMensagem;
+        $faleConosco->save();
+        return view('produto',compact('produtos'));
+
+        // return redirect('faleConosco');
     }
+ 
+
 
     /**
      * Display the specified resource.
