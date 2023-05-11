@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ModelTcc extends Model
 {
     use HasFactory;
+
+    protected $table="tbfaleconosco";
+    protected $fillable = ['nomeFaleConosco','emailFaleConosco','mensagemFaleConosco'];
+    public $timestamps = false;
 }
